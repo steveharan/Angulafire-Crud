@@ -1,7 +1,10 @@
 (function () {
     "use strict";
 
-    var app = angular.module('user', ['ngRoute', 'firebase', 'ui.bootstrap']);
+    var app = angular.module('user', ['ngRoute',
+                'firebase',
+                'ui.router',
+                'ui.bootstrap']);
 
     app.value('fbURL', 'https://angularjscrudmodal.firebaseio.com/');
     app.value('user_table', 'user');
@@ -29,7 +32,7 @@
                         templateUrl: "app/views/listview.html",
                         controller: "ListCtrl"
                     });
-//                $urlRouterProvider.otherwise("/");
+                $urlRouterProvider.otherwise("/");
             }]
     );
 
